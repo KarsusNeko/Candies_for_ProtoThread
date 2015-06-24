@@ -10,12 +10,6 @@
 #include "pt.h"
 #include "timer.h"
 
-/*
- * 通过pt_thread_info中的某个变量得到整个pt_thread_info的指针
- * 	ptr指该变量的指针，member指该变量在pt_thread_info中对应的成员
- */
-#define pt_thread_container(ptr, member)	\
-	((pt_thread_info *)((unsigned char *)ptr - (unsigned char *)(&(((pt_thread_info *)0)->member))))
 #define container_of(ptr, type, member)	\
 	((type *)((unsigned char *)ptr - (unsigned char *)(&(((type *)0)->member))))
 
